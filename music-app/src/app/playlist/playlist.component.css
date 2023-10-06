@@ -1,0 +1,31 @@
+/* Style for the Songs in Playlist */
+h2 {
+    color: #333;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  li {
+    width: 20%; /* 5 songs in a row, as 100% / 5 = 20% */
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: Add a border radius to the images */
+  }
+  
+  /* Style for the messages */
+  p {
+    color: #555;
+  }
+  

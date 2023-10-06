@@ -1,0 +1,19 @@
+ 
+<h1> songs</h1>
+<div *ngIf="recentsongsInPlaylist && recentsongsInPlaylist.length > 0">
+ <h2>Songs in Playlist</h2>
+ <ul class="recentlyplayed">
+   <li *ngFor="let song of recentsongsInPlaylist">
+    <img src="https://th.bing.com/th/id/OIP.4LAJI5npWsddDHskRW8KJwAAAA?pid=ImgDet&rs=1">
+
+     <h2>Title: {{ song.title }}</h2> 
+     <p>Artist: {{ song.artist }}</p>
+   </li>
+ </ul>
+</div>
+<div *ngIf="recentsongsInPlaylist && recentsongsInPlaylist.length === 0">
+ <p>No songs found in the playlist.</p>
+</div>
+<div *ngIf="!recentsongsInPlaylist">
+ <p>Loading songs in playlist...</p>
+</div>

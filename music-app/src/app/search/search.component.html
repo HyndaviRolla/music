@@ -1,0 +1,53 @@
+ 
+ 
+  <div class="searchingBar">
+    <label for="searchTerm">Search By:</label>
+    <input type="text" id="searchTerm" [(ngModel)]="searchTerm" />
+  
+    <label for="searchType">Search Type:</label>
+    <select id="searchType" [(ngModel)]="searchType">
+      <option value="title">Title</option>
+      <option value="artist">Artist</option>
+      <option value="musicdirector">Music Director</option>
+    </select>
+  
+    <button (click)="search()">Search</button>
+  </div>
+  
+  <div *ngIf="Results.length > 0" class="searchinresults">
+    <h2> Results</h2>
+    <ul>
+      <li *ngFor="let result of Results">
+        <img src="https://th.bing.com/th/id/OIP.4LAJI5npWsddDHskRW8KJwAAAA?pid=ImgDet&rs=1">
+        <h2>Title: {{ result.title }}</h2> 
+        <p>Artist: {{ result.artist }}</p> 
+        <p>Music Director: {{ result.musicDirector }}</p>
+      </li>
+    </ul>
+  </div>
+ 
+
+   <div class="sorting">
+    <label for="sort">Sort By:</label>
+    <select id="sort" [(ngModel)]="sortBy" (change)="sortMusic()">
+      <option value="title">Title</option>
+      <option value="artist">Artist</option>
+    </select>
+  </div>
+  
+  <div *ngIf="songList && songList.length > 0" class="Sortingresults">
+    <h2>Song List</h2>
+    <ul>
+      <li *ngFor="let song of songList">
+        <img src="https://th.bing.com/th/id/OIP.4LAJI5npWsddDHskRW8KJwAAAA?pid=ImgDet&rs=1">
+        <h2>Title: {{ song.title }}</h2> 
+        <p>Artist: {{ song.artist }}</p>
+       
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="!songList || songList.length === 0">
+    <p>No songs available or an error occurred.</p>
+  </div>
+  

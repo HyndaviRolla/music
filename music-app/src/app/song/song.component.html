@@ -1,0 +1,14 @@
+ 
+<div>    
+    <ul> 
+      <li *ngFor="let song of songList">
+        <img src="https://th.bing.com/th/id/OIP.4LAJI5npWsddDHskRW8KJwAAAA?pid=ImgDet&rs=1">
+       <h2>Title: {{song.title}} </h2>
+       <p>Artist: {{ song.artist.join(', ') }} </p>
+       <p>Music Director:Genre: {{song.musicDirector}}</p> 
+       <p> {{ song.genre}}</p>
+       <button (click)="addToPlaylist(song.id)">Add to Playlist </button><br>
+       <button (click)="addToRecentPlaylist(song.id)">Play</button>
+      </li>
+    </ul>
+  </div> 

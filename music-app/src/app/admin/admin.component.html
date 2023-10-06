@@ -1,0 +1,33 @@
+
+<div>
+    
+   
+    <div class="centered-container">
+      <div class="AddSong card">
+        <label>Title:</label>
+        <input type="text" [(ngModel)]="newSong.title" />
+    
+        <label>Artists:</label>
+        <input type="text" [(ngModel)]="newSong.artist[0]" />
+        <input type="text" [(ngModel)]="newSong.artist[1]" />
+    
+        <label>Genre:</label>
+        <input type="text" [(ngModel)]="newSong.genre" />
+    
+        <label>MusicDirector:</label>
+        <input type="text" [(ngModel)]="newSong.musicDirector" />
+    
+        <button (click)="addSong()">Add Song</button>
+      </div>
+    </div>
+    
+   <div class="addedSongs">
+    <ul>
+      <li *ngFor="let song of songList">
+        <img src="https://th.bing.com/th/id/OIP.4LAJI5npWsddDHskRW8KJwAAAA?pid=ImgDet&rs=1">
+    <h2>Title: {{song.title}} </h2><p>Artist: {{ song.artist.join(', ') }} </p><p> Music Director:{{song.musicDirector}}</p><p>Genre: {{ song.genre}}</p>
+        <button (click)="deleteSong(song.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  </div>

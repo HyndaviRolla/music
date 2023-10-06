@@ -1,0 +1,78 @@
+/* Style for the Search and Search Results */
+h2 {
+    color: #333;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  li {
+    width: 20%; /* 5 songs in a row, as 100% / 5 = 20% */
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: Add a border radius to the images */
+  }
+  
+  /* Style for the messages */
+  p {
+    color: #555;
+  }
+  
+  /* Style for the Sort By section */
+  #sort {
+    margin-top: 10px;
+  }
+  
+  /* Style for the Song List section */
+  #songList {
+    margin-top: 20px;
+  }
+  
+  /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styles for the searchingBar */
+  .searchingBar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
+  input, select, button {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
